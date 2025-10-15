@@ -65,7 +65,7 @@ class CategoriaController extends Controller
         //
         $data = $request->validate([
             'nombre' => 'sometimes|required|string|max:255|unique:categorias,nombre,' . $categoria->id,
-            'descripcion' => 'nullables|string',
+            'descripcion' => 'nullable|string',
             'activo' => 'boolean'
         ]);
 

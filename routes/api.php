@@ -23,13 +23,13 @@ use App\Http\Controllers\Api\CategoriaController;
 //Route::apiResource('producto', ProductoController::class);
 //Rutas de Categoria
 Route::get('/consultar-todas-categorias', [CategoriaController::class, 'index']);
-Route::get('/consultar-todas-categorias/{categoria}', [CategoriaController::class, 'show']);
+Route::get('/consultar-una-categoria/{categoria}', [CategoriaController::class, 'show']);
 Route::post('/guardar-categoria', [CategoriaController::class, 'store']);
 Route::put('/actualizar-categoria/{categoria}', [CategoriaController::class, 'update']);
 Route::delete('/eliminar-categoria/{categoria}', [CategoriaController::class, 'destroy']);
 
 Route::get('/productos', [ProductoController::class, 'index']);
-Route::get('/productos/{id}', [ProductoController::class, 'show']);
-Route::post('/productos', [ProductoController::class, 'store']);
-Route::put('/productos/{id}', [ProductoController::class, 'update']);
-Route::delete('/productos/{id}', [ProductoController::class, 'destroy']);
+Route::get('/consultar-un-producto/{id}', [ProductoController::class, 'show']);
+Route::post('/guardar-productos', [ProductoController::class, 'store']);
+Route::put('/actualizar-productos/{id}  ', [ProductoController::class, 'update']);
+Route::delete('/eliminar-productos/{id}', [ProductoController::class, 'destroy']);
